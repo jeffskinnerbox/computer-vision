@@ -17,6 +17,10 @@ the relevant versions of them _lazily_.
 This means large files are downloaded during the [checkout][03]
 process rather than during [cloning][04] or [fetching][05].
 
+>**NOTE:**GitHub will warn you when pushing files larger than 50 MB.
+>You will not be allowed to push files larger than 100 MB.
+>See more information [here][08].
+
 # Intalling Git LFS
 There are [multiple ways to install Git LFS][06],
 but I using your the `apt`package manager.
@@ -59,7 +63,7 @@ command as shown below:
 
 ```bash
 # associate all video & image files to Git LFS
-git lfs track "*.mp4" "*.avi" "*.webm" "*.mkv"
+git lfs track "*.mp4" "*.avi" "*.webm" "*.mkv" "*.ogv"
 git lfs track "*.bmp" "*.gif" "*.jpg" "*.png" "*.tif" "*.svg"
 
 # associate data sets to Git LFS
@@ -138,6 +142,6 @@ file types to our previous created repository.
 [05]:https://www.atlassian.com/git/tutorials/syncing/git-fetch
 [06]:https://www.atlassian.com/git/tutorials/git-lfs#installing-git-lfs
 [07]:https://www.atlassian.com/git/tutorials/git-hooks
-[08]:
+[08]:https://help.github.com/en/github/managing-large-files/working-with-large-files
 [09]:
 [10]:
